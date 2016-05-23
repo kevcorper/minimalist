@@ -1,0 +1,24 @@
+<form id="snippet-form" method="post" action="/snippets">
+	<label for="title">Title:</label>
+	<input id="title" type="text" name="snippet[title]">
+
+	<label for="description">Description:</label>
+	<input id="description" type="text" name="snippet[description]">
+
+	<label for="category">Select Category</label>
+	<select id="category" name="snippet[category]">
+	  <option value="list">List</option>
+	  <option value="form">Form</option>
+	  <option value="button">Button</option>
+	  <option value="container">Container</option>
+	  <option value="navbar">NavBar</option>
+	  <option value="layout">Layout</option>
+	  <option value="javascript">Javascript</option>
+	</select>
+
+	<div class="textarea">
+	<textarea id="html" type="text" name="snippet[html]" placeholder="html"></textarea>
+	<textarea id="css" type="text" name="snippet[css]" placeholder="css"></textarea>
+	</div>
+	<input type="submit" value="Save Snippet">
+</form>

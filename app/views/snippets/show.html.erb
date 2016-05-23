@@ -1,0 +1,16 @@
+<div id="snippet-info">
+	<h1><%= @snippet.title %></h1>
+	created by: <%= @snippet.author.username %>
+	<br><br>
+	"<%= @snippet.description %>"
+<div>
+
+<%= render 'iframe' %>
+
+<div id="code-holder">
+	<div class="code-box"><h2>HTML</h2><br><%= @snippet.escape_char %></div>
+	<div class="code-box"><h2>CSS</h2><br><%= @snippet.css %></div>
+	<% if @snippet.js %>
+		<div class="code-box"><h2>JS</h2><br><%= @snippet.js %></div>
+	<% end %>
+</div>
