@@ -1,0 +1,11 @@
+<h2 class="quote">"simple snippets for clean design"</h2>
+
+<%= link_to 'create a snippet', new_snippet_path, id: "add-form", class: "create-button" %>
+<%= render new_snippet_path %>
+
+
+<div id="snippet-blurb-all">
+	<% Snippet.all.each do |snippet| %>
+		<%= render snippet %>
+	<% end %>
+</div>

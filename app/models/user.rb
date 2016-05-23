@@ -1,0 +1,11 @@
+class User < ActiveRecord::Base
+	has_secure_password
+
+	validates :username, presence: true, uniqueness: true
+	validates :email, presence: true, uniqueness: true
+
+	has_many :snippets, dependent: :destroy, foreign_key: :author_id
+	has_many :comments, dependent: :destroy, foreign_key: :author_id
+	has_many :user_snippets, dependent: :destroy
+	has_many :favorites, through: :user_snippets, source: :snippet
+end

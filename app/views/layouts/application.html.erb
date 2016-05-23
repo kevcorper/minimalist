@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Minimalist</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>minimalist</title>
+<!--    stylesheet_link_tag    'normalize', media: 'all' %> -->
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+<!--    stylesheet_link_tag    'animate', media: 'all' %> -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <%= javascript_include_tag 'application' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header>
+    <a id="main-title" href="/snippets"><span class="black">minim<span class="small">&#916;</span></span>list<!--<span class="small">+</span> --></a>
+    <nav id="user-nav">
+      <% if current_user %>
+        <%= link_to "#{current_user.username}", user_path(current_user) %> |
+        <%= link_to "logout", logout_path %>
+      <% else %>
+        <%= link_to('register', new_user_path) %> |
+        <%= link_to('login', new_session_path) %>
+      <% end %>
+    </nav>
+  </header>
+  <nav id="main-nav">
+    <a href="/snippets/cat/container">containers</a>
+    <a href="/snippets/cat/navbar">navbars</a>
+    <a href="/snippets/cat/form">forms</a>
+    <a href="/snippets/cat/button">buttons</a>
+    <a href="/snippets/cat/list">lists</a>
+    <a href="/snippets/cat/layout">layouts</a>
+    <a href="/snippets/cat/font">fonts</a>
+    <a href="/snippets/cat/javascript">colors</a>
+    <a href="/about">about</a>
+  </nav>
+    <%= yield %>
 </body>
+<footer>Copyright ⓒ2016 | Kevin Perkins
 </html>
