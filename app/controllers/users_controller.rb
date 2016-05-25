@@ -26,6 +26,9 @@ class UsersController < ApplicationController
     if logged_in?
       @user = User.find_by(id: params[:id])
       if @user
+        @snippets = @user.snippets
+        @favorites = @user.favorites
+        @commented = @user.comments.map {|comment| comment.snippet}
         render 'show'
       else
         redirect_to snippets_path

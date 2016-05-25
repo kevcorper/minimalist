@@ -1,4 +1,6 @@
-<form id="snippet-form" method="post" action="/snippets">
+<%= render 'errors' %>
+
+<form id="snippet-form" method="post" action="/users/<%= current_user.id %>/snippets">
 	<label for="title">Title:</label>
 	<input id="title" type="text" name="snippet[title]">
 
@@ -13,7 +15,7 @@
 	  <option value="container">Container</option>
 	  <option value="navbar">NavBar</option>
 	  <option value="layout">Layout</option>
-	  <option value="javascript">Javascript</option>
+	  <option value="color">Color</option>
 	</select>
 
 	<div class="textarea">

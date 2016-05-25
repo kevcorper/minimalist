@@ -1,16 +1,22 @@
 <div id="snippet-info">
-	<h1><%= @snippet.title %></h1>
+	<h1><%= @snippet.title %> <span> &#916;</span></h1>
 	created by: <%= @snippet.author.username %>
 	<br><br>
 	"<%= @snippet.description %>"
 <div>
 
-<%= render 'iframe' %>
+<iframe src="../snippets/<%= @snippet.id %>/iframes" id="console">
+</iframe>
 
 <div id="code-holder">
-	<div class="code-box"><h2>HTML</h2><br><%= @snippet.escape_char %></div>
+	<div class="code-box"><h2>HTML</h2><br><%= @snippet.html %></div>
 	<div class="code-box"><h2>CSS</h2><br><%= @snippet.css %></div>
 	<% if @snippet.js %>
 		<div class="code-box"><h2>JS</h2><br><%= @snippet.js %></div>
 	<% end %>
 </div>
+
+<h2>comments</h2>
+<%= render @comments %>
+
+<%= render '/comments/new' %>

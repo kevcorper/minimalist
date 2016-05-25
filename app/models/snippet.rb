@@ -11,5 +11,6 @@ class Snippet < ActiveRecord::Base
   	html = self.html.clone
   	html.gsub!("<", "&lt;")
   	html.gsub!(">", "&gt;")
+  	return html
   end
 end
