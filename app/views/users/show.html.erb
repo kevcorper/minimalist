@@ -1,1 +1,8 @@
-haii
+<h1>hey there, <%= @user.username %>!</h1>
+
+<h2>Your Snippets</h2>
+	<%= render @snippets %>
+<h2>Your Favorite Snippets</h2>
+	<%= render @favorites %>
+<h2>Snippets you have commented on</h2>
+	<%= render @commented %>
