@@ -1,8 +1,12 @@
-<h1>hey there, <%= @user.username %>!</h1>
+<h1 id="user-greeting">hey there, <span class="grey"><%= @user.username %></span>!</h1>
 
-<h2>Your Snippets</h2>
-	<%= render @snippets %>
-<h2>Your Favorite Snippets</h2>
-	<%= render @favorites %>
-<h2>Snippets you have commented on</h2>
-	<%= render @commented %>
+<h2 class="snippet-count">Your Snippets <span class="grey">( <%= @snippets.count %> )</span></h2>
+	<div id="snippet-blurb-all">
+		<%= render @snippets %>
+	</div>
+<!-- <h2>Your Favorite Snippets</h2> -->
+	<!-- render @favorites -->
+<h2 class="snippet-count">Snippets you have commented on <span class="grey">( <%= @commented.count %> )</span></h2>
+	<div id="snippet-blurb-all">
+		<%= render @commented %>
+	</div>

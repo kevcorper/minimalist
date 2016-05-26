@@ -38,11 +38,6 @@ header {
 	border-bottom: 0.25px solid lightgray;
 }
 
-footer {
-	text-align: center;
-	margin: 150px auto 25px auto;
-}
-
 .create-button {
 	padding: 5px;
 	background-color: lightgray;
@@ -193,6 +188,12 @@ footer {
 	text-align: center;
 }
 
+#about {
+	width: 75%;
+	text-align: center;
+	margin: auto;
+}
+
 .textarea {
 	display: block;
 	margin: 20px auto;
@@ -202,9 +203,41 @@ footer {
 .textarea textarea {
 	width: 40%;
 	height: 150px;
+	text-align: left;
+}
+
+.snippet-count {
 	text-align: center;
 }
 
+#user-greeting {
+	font-size: 50px;
+}
 
+.grey {
+	color: gray;
+}
+
+footer {
+	text-align: center;
+}
+
+#comment-field {
+	width: 500px;
+	display: block;
+	margin: auto;
+	height: 100px;
+}
+
+.comment {
+	width: 75%;
+	border-top: 0.25px solid lightgray;
+	margin: auto;
+	padding: 30px 0px;
+}
+
+.comment div {
+	margin-bottom: 10px;
+}
 
 

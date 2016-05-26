@@ -2,7 +2,7 @@
 	<%= render 'errors' %>
 
 	<form method="post" action="/users/<%= current_user.id %>/snippets/<%= @snippet.id %>/comments">
-		<textarea name="comment[body]"></textarea>
-		<input type="submit" value="comment">
+		<textarea id="comment-field" name="comment[body]"></textarea>
+		<input class="create-button" type="submit" value="comment">
 	</form>
 </div>
