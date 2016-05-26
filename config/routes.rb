@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:show]
 
+  resources :about, only: [:index]
+
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login' => 'sessions#new'

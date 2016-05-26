@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   def show
     if logged_in?
       @user = User.find_by(id: params[:id])
-      if @user
+      if @user === current_user
         @snippets = @user.snippets
         @favorites = @user.favorites
         @commented = @user.comments.map {|comment| comment.snippet}

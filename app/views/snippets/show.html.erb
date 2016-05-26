@@ -1,5 +1,5 @@
 <div id="snippet-info">
-	<h1><%= @snippet.title %> <span> &#916;</span></h1>
+	<h1><%= @snippet.title %></h1>
 	created by: <%= @snippet.author.username %>
 	<br><br>
 	"<%= @snippet.description %>"
@@ -16,7 +16,9 @@
 	<% end %>
 </div>
 
-<h2>comments</h2>
+<h2>comments <span class="grey">( <%= @comments.count %> )</span></h2>
 <%= render @comments %>
 
-<%= render '/comments/new' %>
+<% if current_user %>
+	<%= render '/comments/new' %>
+<% end %>
