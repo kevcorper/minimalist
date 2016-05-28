@@ -1,12 +1,25 @@
 <h1 id="user-greeting">hey there, <span class="grey"><%= @user.username %></span>!</h1>
 
+<%= link_to("edit", edit_user_path(@user)) %>
+
 <h2 class="snippet-count">Your Snippets <span class="grey">( <%= @snippets.count %> )</span></h2>
 	<div id="snippet-blurb-all">
 		<%= render @snippets %>
 	</div>
-<!-- <h2>Your Favorite Snippets</h2> -->
-	<!-- render @favorites -->
-<h2 class="snippet-count">Snippets you have commented on <span class="grey">( <%= @commented.count %> )</span></h2>
+<!-- <h2>Your Favorite Snippets <span class="grey">( - @favorites.count - )</span></h2> -->
 	<div id="snippet-blurb-all">
-		<%= render @commented %>
+	<!-- render @favorites -->
 	</div>
+
+	<h2 class="snippet-count">Snippets you have commented on <span class="grey">( <%= @commented.count %> )</span></h2>
+	<div id="snippet-blurb-all">
+		<!-- render @commented -->
+	</div>
+
+	<%= button_to("remove account", user_snippet_path(@user), method: :delete) %>
+
+
+
+
+
+	<!-- when user updates, creates new account and doesnt delete old username -->
