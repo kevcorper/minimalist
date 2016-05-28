@@ -1,0 +1,25 @@
+<%= render 'errors' %>
+
+<form method="post" action="/users/<%= current_user.id %>/snippets/<%= @snippet.id %>">
+	<input type="hidden" name="_method"  value="put">
+	<label for="title">Title:</label>
+	<input id="title" type="text" name="snippet[title]" value="<%= @snippet.title %>">
+
+	<label for="description">Description:</label>
+	<input id="description" type="text" name="snippet[description]" value="<%= @snippet.description %>">
+
+	<label for="category">Select Category</label>
+	<select id="category" name="snippet[category]" value="<%= @snippet.category %>">
+	  <option value="list">List</option>
+	  <option value="form">Form</option>
+	  <option value="button">Button</option>
+	  <option value="container">Container</option>
+	  <option value="navbar">NavBar</option>
+	</select>
+
+	<div class="textarea">
+	<textarea id="html" type="text" name="snippet[html]" placeholder="html"><%= @snippet.title %></textarea>
+	<textarea id="css" type="text" name="snippet[css]" placeholder="css"><%= @snippet.title %></textarea>
+	</div>
+	<input class="create-button" type="submit" value="update snippet">
+</form>
