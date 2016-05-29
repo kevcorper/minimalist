@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   root 'snippets#index'
 
   resources :users, except: [:index] do
-  	resources :snippets, only: [:new, :create] do
+  	resources :snippets, except: [:index, :show] do
       resources :comments, except: [:index, :show]
     end
   end
 
-  resources :snippets, except: [:new, :create] do
+  resources :snippets, only: [:show, :index] do
   	resources :iframes, only: [:index]
 	end
 

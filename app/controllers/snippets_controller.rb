@@ -15,7 +15,7 @@ class SnippetsController < ApplicationController
 			  redirect_to snippet_path(@snippet)
 			else
 			  @errors = @snippet.errors.full_messages
-			  render 'index'
+			  render 'new'
 			end
 		else
 			redirect_to root_path
@@ -23,19 +23,35 @@ class SnippetsController < ApplicationController
 	end
 
 	def show
-		@snippet = Snippet.find_by(id: params[:id])
+		@snippet = Snippet.find(params[:id])
 		@comments = @snippet.comments.sort_by{|comment| comment.created_at}.reverse
 	end
 
 	def edit
+		@snippet = Snippet.find(params[:id])
+		@user = User.find(params[:user_id])
 	end
 
 	def update
+		@snippet = Snippet.find(params[:id])
+		@user = User.find(params[:user_id])
+		if @snippet.author == @user
+			@snippet.update_attributes(snippet_params)
+			if @snippet.save
+			  redirect_to snippet_path(@snippet)
+			else
+			  @errors = @snippet.errors.full_messages
+			  render 'edit'
+			end
+		else
+			redirect_to snippet_path(@snippet)
+		end
 	end
 
 	def destroy
-		@snippet = Snippet.find_by(id: params[:id])
-		if logged_in? && current_user = @snippet.author
+		@snippet = Snippet.find(params[:id])
+		@user = User.find(params[:user_id])
+		if @user = @snippet.author
 		  @snippet.destroy
 		  redirect_to root_path
 		else

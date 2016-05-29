@@ -1,0 +1,9 @@
+<div>
+	<%= render 'errors' %>
+
+	<form method="post" action="/users/<%= @comment.author.id %>/snippets/<%= @snippet.id %>/comments/<%= @comment.id %>">
+		<input type="hidden" name="_method"  value="put">
+		<textarea id="comment-field" name="comment[body]"><%= @comment.body %></textarea>
+		<input class="create-button" type="submit" value="update comment">
+	</form>
+</div>

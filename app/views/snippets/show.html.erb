@@ -1,12 +1,19 @@
 <div id="snippet-info">
-	<h1><%= @snippet.title %></h1>
-	created by: <%= @snippet.author.username %>
-	<br><br>
-	"<%= @snippet.description %>"
-<div>
+	<div>
+		<h1><%= @snippet.title %></h1>
+		created by: <%= @snippet.author.username %>
+		<br><br>
+		"<%= @snippet.description %>"<br><br>
 
-<iframe src="../snippets/<%= @snippet.id %>/iframes" id="console">
-</iframe>
+		<% if current_user == @snippet.author %>
+			<%= link_to("edit", edit_user_snippet_path(current_user, @snippet)) %> |
+			<%= button_to("delete", user_snippet_path(current_user, @snippet), method: :delete) %>
+		<% end %>
+	</div>
+
+	<iframe src="../snippets/<%= @snippet.id %>/iframes" id="console">
+	</iframe>
+</div>
 
 <div id="code-holder">
 	<div class="code-box"><h2>HTML</h2><br><%= @snippet.html %></div>
@@ -16,7 +23,7 @@
 	<% end %>
 </div>
 
-<h2>comments <span class="grey">( <%= @comments.count %> )</span></h2>
+<h2 style="text-align: center">comments <span class="grey">( <%= @comments.count %> )</span></h2>
 <%= render @comments %>
 
 <% if current_user %>

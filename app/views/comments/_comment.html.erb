@@ -2,4 +2,11 @@
 	<div>"<%= comment.body %>"</div>
 	<span class="grey">by <%= comment.author.username %></span> |
 	<span class="grey"><%= distance_of_time_in_words(Time.now, comment.created_at) %> ago</span>
+	<% if current_user == comment.author %>
+		<div>
+			<%= link_to("edit", edit_user_snippet_comment_path(comment.author, comment.snippet, comment)) %> |
+			<%= button_to("delete", user_snippet_comment_path(comment.author, comment.snippet, comment), method: :delete) %>
+		</div>
+	<% end %>
+
 </div>
