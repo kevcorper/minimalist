@@ -34,8 +34,6 @@ Lastly, a user is able to comment on all snippets.
 
 ##Coming Features
 
--'favorites' functionality
-
 -live iframe for viewing result while typing HTML and CSS
 
 -layout, font, and color pages with minimalist recommendations and user post capabilities
