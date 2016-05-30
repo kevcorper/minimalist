@@ -1,9 +1,9 @@
-<h1>Log In</h1>
+<h1 style="text-align: center">log in</h1>
 
-<%= form_tag('/login', method: 'post') do %>
+<%= form_tag('/login', method: 'post', id: "user-form") do %>
   <%= label_tag('username') %>
   <%= text_field_tag(:username) %>
   <%= label_tag('password') %>
   <%= password_field_tag(:password) %>
-  <%= submit_tag('log in') %>
+  <%= submit_tag('log in', class: "create-button") %>
 <% end %>

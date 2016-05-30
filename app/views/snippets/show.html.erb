@@ -1,15 +1,35 @@
 <div id="snippet-info">
 	<div>
-		<h1><%= @snippet.title %></h1>
-		created by: <%= @snippet.author.username %>
-		<br><br>
-		"<%= @snippet.description %>"<br><br>
-
-		<% if current_user == @snippet.author %>
-			<%= link_to("update", edit_user_snippet_path(current_user, @snippet), class: "normalize") %> |
-			<%= button_to("remove", user_snippet_path(current_user, @snippet), method: :delete, data: {confirm: "Are you sure you would like to delete this snippet?"}, class: "normalize-link") %>
+		<h1 id="snippet-title"><%= @snippet.title %></h1>
+		<% if logged_in? && current_user.has_favorite?(@snippet) %>
+			<span id="star">&#9733;</span>
 		<% end %>
+
+		<div class="snippet-fact">
+			created by: <%= @snippet.author.username %>
+		</div>
+
+		<div class="snippet-fact">
+			"<%= @snippet.description %>"
+		</div>
+
+		<div class="snippet-fact">
+			<% if current_user == @snippet.author %>
+				<%= link_to("update", edit_user_snippet_path(current_user, @snippet), class: "normalize") %> |
+				<%= button_to("remove", user_snippet_path(current_user, @snippet), method: :delete, data: {confirm: "Are you sure you would like to delete this snippet?"}, class: "normalize-link") %>
+			<% end %>
+		</div>
 	</div>
+
+	<div id="favorite">
+	<% if logged_in? %>
+		<% if !current_user.has_favorite?(@snippet) %>
+			<%= button_to("favorite", user_snippet_favorites_path(current_user, @snippet), method: :post, class: "favorite-button") %>
+		<% else %>
+			<%= button_to("unfavorite", user_snippet_favorite_path(current_user, @snippet, @snippet), method: :delete, class: "favorite-button") %>
+		<% end %>
+	<% end %>
+</div>
 
 	<iframe src="../snippets/<%= @snippet.id %>/iframes" id="console">
 	</iframe>

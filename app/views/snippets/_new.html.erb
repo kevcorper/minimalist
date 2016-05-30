@@ -1,19 +1,20 @@
 <%= render 'errors' %>
 
 <form id="snippet-form" method="post" action="/users/<%= current_user.id %>/snippets">
-	<label for="title">Title:</label>
+	<label for="title">title:</label>
 	<input id="title" type="text" name="snippet[title]">
 
-	<label for="description">Description:</label>
+	<label for="description">description:</label>
 	<input id="description" type="text" name="snippet[description]">
-
-	<label for="category">Select Category</label>
+	<br>
+	<br>
+	<label for="category">category:</label>
 	<select id="category" name="snippet[category]">
-	  <option value="list">List</option>
-	  <option value="form">Form</option>
-	  <option value="button">Button</option>
-	  <option value="container">Container</option>
-	  <option value="navbar">NavBar</option>
+	  <option value="list">list</option>
+	  <option value="form">form</option>
+	  <option value="button">button</option>
+	  <option value="container">container</option>
+	  <option value="navbar">navbar</option>
 	</select>
 
 	<div class="textarea">

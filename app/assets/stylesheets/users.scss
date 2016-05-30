@@ -12,12 +12,15 @@
 
 #user-greeting {
 	font-size: 50px;
-	display: inline-block;
+	text-align: center;
 }
 
 #user-edit {
-	display: inline-block;
-	float: right;
-	line-height: 100px;
-	padding-right: 10px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: solid 0.25px lightgray;
+}
+
+#user-form {
+	text-align: center;
 }

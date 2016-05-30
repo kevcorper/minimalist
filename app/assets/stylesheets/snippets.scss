@@ -70,6 +70,11 @@
 	margin: 25px 15px;
 }
 
+#snippet-title {
+	display: inline-block;
+	margin: 20px auto;
+}
+
 #snippet-info {
 	margin: auto;
 	margin-bottom: 25px;
@@ -113,4 +118,31 @@
 
 .snippet-count {
 	text-align: center;
+	margin-top: 40px;
 }
+
+.snippet-fact {
+	margin: 5px;
+}
+
+#favorite {
+	text-align: center;
+}
+
+.favorite-button {
+	background-color: gray;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 125px;
+}
+
+.favorite-button:hover {
+	background-color: lightgray;
+}
+
+#star {
+	font-size: 25px;
+	position: absolute;
+}
+
