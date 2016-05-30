@@ -7,8 +7,13 @@ class CommentsController < ApplicationController
 		if (@user = User.find(params[:user_id])) && (@snippet = Snippet.find(params[:snippet_id]))
 			@comment = @snippet.comments.new(comment_params)
 			@comment.author = @user
+
+			# if @comment.save && request.xhr?
+			# 	render "comment", layout: false
+			# elsif @comment.save
+			#   redirect_to snippet_path(@snippet)
 			if @comment.save
-			  redirect_to snippet_path(@snippet)
+				redirect_to snippet_path(@snippet)
 			else
 			  @errors = @comment.errors.full_messages
 			  render 'new'
