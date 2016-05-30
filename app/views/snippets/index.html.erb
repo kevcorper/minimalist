@@ -1,11 +1,9 @@
 <h2 class="quote">"simple snippets for clean design"</h2>
 
-
 <% if logged_in? %>
 	<%= link_to 'create a snippet', new_user_snippet_path(current_user), id: "add-form", class: "create-button" %>
 	<%= render 'new' %>
 <% end %>
-
 
 <div id="snippet-blurb-all">
 	<%= render @snippets %>

@@ -53,7 +53,7 @@ a:hover {
 
 header {
 	height: 90px;
-	border-bottom: 0.25px solid lightgray;
+	border-bottom: 1px solid lightgray;
 }
 
 .create-button {
@@ -65,12 +65,12 @@ header {
 	text-align: center;
 	display: block;
 	width: 200px;
-	border: 0.25px solid white;
+	border: 1px solid white;
 	color: white;
 }
 
 .create-button:hover {
-	border: 0.25px solid lightgray;
+	border: 1px solid lightgray;
 	background-color: white;
 	color: gray;
 }
@@ -93,16 +93,16 @@ header {
 #main-nav a {
 	font-size: 16px;
 	padding: 0px 5px 5px 5px;
-	border-bottom: 0.25px solid white;
-	border-right: 0.25px solid white;
-	border-left: 0.25px solid white;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
 }
 
 #main-nav a:hover {
-	border-top: 0.25px solid white;
-	border-bottom: 0.25px solid lightgray;
-	border-right: 0.25px solid lightgray;
-	border-left: 0.25px solid lightgray;
+	border-top: 1px solid white;
+	border-bottom: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
 }
 
 #main-nav:after {
@@ -153,7 +153,7 @@ label {
 
 .comment {
 	width: 75%;
-	border-top: 0.25px solid lightgray;
+	border-top: 1px solid lightgray;
 	margin: auto;
 	padding: 30px 0px;
 	text-align: center;
@@ -161,6 +161,10 @@ label {
 
 .comment div {
 	margin-bottom: 10px;
+}
+
+#comment-form form {
+	text-align: center;
 }
 
 /*snippets*/
@@ -173,7 +177,7 @@ label {
 }
 
 .snippet-blurb {
-	border: 0.25px solid white;
+	border: 1px solid white;
 	border-radius: 3px;
 	display: inline-block;
 	padding: 10px;
@@ -185,7 +189,7 @@ label {
 }
 
 .snippet-blurb:hover {
-	border: 0.25px solid lightgray;
+	border: 1px solid lightgray;
 	background-color: white;
 }
 
@@ -329,7 +333,7 @@ label {
 #user-edit {
 	text-align: center;
 	padding-bottom: 20px;
-	border-bottom: solid 0.25px lightgray;
+	border-bottom: solid 1px lightgray;
 }
 
 #user-form {

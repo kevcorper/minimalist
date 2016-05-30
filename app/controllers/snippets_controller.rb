@@ -24,7 +24,7 @@ class SnippetsController < ApplicationController
 
 	def show
 		@snippet = Snippet.find(params[:id])
-		@comments = @snippet.comments.sort_by{|comment| comment.created_at}.reverse
+		@comments = @snippet.comments
 	end
 
 	def edit

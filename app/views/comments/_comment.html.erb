@@ -1,7 +1,10 @@
 <div class="comment">
+
 	<div>"<%= comment.body %>"</div>
+
 	by <%= comment.author.username %> |
 	<span class="grey"><%= distance_of_time_in_words(Time.now, comment.created_at) %> ago</span>
+	
 	<% if current_user == comment.author %>
 			| <%= link_to("edit", edit_user_snippet_comment_path(comment.author, comment.snippet, comment)) %> |
 			<%= button_to("delete", user_snippet_comment_path(comment.author, comment.snippet, comment), method: :delete, data: {confirm: "Are you sure you would like to delete this comment?"}, class: "normalize-link") %>

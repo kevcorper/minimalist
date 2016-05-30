@@ -44,7 +44,9 @@
 </div>
 
 <h2 style="text-align: center">comments <span class="grey">( <%= @comments.count %> )</span></h2>
-<%= render @comments %>
+<div id="comments-all">
+	<%= render @comments %>
+</div>
 
 <% if current_user %>
 	<%= render '/comments/new' %>
