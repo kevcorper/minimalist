@@ -141,3 +141,203 @@ label {
   width: 80px;
   text-align: right;
 }​
+
+/*comments*/
+
+#comment-field {
+	width: 500px;
+	display: block;
+	margin: auto;
+	height: 100px;
+}
+
+.comment {
+	width: 75%;
+	border-top: 0.25px solid lightgray;
+	margin: auto;
+	padding: 30px 0px;
+	text-align: center;
+}
+
+.comment div {
+	margin-bottom: 10px;
+}
+
+/*snippets*/
+
+
+#snippet-blurb-all {
+	margin: auto;
+	text-align: center;
+	padding: 0px;
+}
+
+.snippet-blurb {
+	border: 0.25px solid white;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 10px;
+	width: 200px;
+	height: 200px;
+	text-align: justify;
+	margin: 30px 30px 0px 30px;
+	background-color: lightgray;
+}
+
+.snippet-blurb:hover {
+	border: 0.25px solid lightgray;
+	background-color: white;
+}
+
+.blurb-desc {
+	position: absolute;
+	width: 200px;
+	margin: 20px 0px;
+}
+
+.cat {
+	margin-bottom: 10px;
+	font-family: courier, monospace;
+	color:black;
+}
+
+.quote {
+	text-align: center;
+	color: lightgray;
+	margin-bottom: 50px;
+}
+
+#code-holder {
+	margin: 25px auto;
+	text-align: center;
+}
+
+#console {
+	margin: 25px auto;
+	width: 80%;
+	min-height: 100px;
+	padding: 25px;
+	border: 0.5px solid gray;
+	border-radius: 10px;
+}
+
+.code-box {
+	font-family: courier, monospace;
+	display: inline-block;
+	width: 80%;
+	height: 150px;
+	overflow: scroll;
+	padding: 20px;
+	background-color: gray;
+	color: white;
+	border-radius: 5px;
+	margin: 25px 15px;
+}
+
+#snippet-title {
+	display: inline-block;
+	margin: 20px auto;
+}
+
+#snippet-info {
+	margin: auto;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+#snippet-form {
+	width: 80%;
+	display: none;
+	margin: auto;
+	text-align: center;
+}
+
+#snippet-form.input {
+	display: block;
+	text-align: center;
+}
+
+#snippet-form.input[type="submit"] {
+	display: block;
+	text-align: center;
+}
+
+#about {
+	width: 75%;
+	text-align: center;
+	margin: auto;
+}
+
+.textarea {
+	display: block;
+	margin: 20px auto;
+	width: 80%;
+}
+
+.textarea textarea {
+	width: 40%;
+	height: 150px;
+	text-align: left;
+}
+
+.snippet-count {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.snippet-fact {
+	margin: 5px;
+}
+
+#favorite {
+	text-align: center;
+}
+
+.favorite-button {
+	background-color: gray;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 125px;
+}
+
+.favorite-button:hover {
+	background-color: lightgray;
+}
+
+#star {
+	font-size: 25px;
+	position: absolute;
+}
+
+
+/*users*/
+
+#user-nav {
+	float: right;
+}
+
+#user-title {
+	height: 100px;
+}
+
+#user-greeting {
+	font-size: 50px;
+	text-align: center;
+}
+
+#user-edit {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: solid 0.25px lightgray;
+}
+
+#user-form {
+	text-align: center;
+}
+
+
+
+
+
+
