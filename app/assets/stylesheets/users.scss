@@ -1,3 +1,23 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#user-nav {
+	float: right;
+}
+
+#user-title {
+	height: 100px;
+}
+
+#user-greeting {
+	font-size: 50px;
+	display: inline-block;
+}
+
+#user-edit {
+	display: inline-block;
+	float: right;
+	line-height: 100px;
+	padding-right: 10px;
+}

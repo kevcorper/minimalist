@@ -1,6 +1,15 @@
-<h1 id="user-greeting">hey there, <span class="grey"><%= @user.username %></span>!</h1>
+<div id="user-title">
 
-<%= link_to("edit", edit_user_path(@user)) %>
+	<h1 id="user-greeting">hey there, <span class="grey"><%= @user.username %></span>!</h1>
+
+	<div id="user-edit">
+		<%= link_to("edit account", edit_user_path(@user), :class => "normalize-link") %> |
+		<%= button_to("remove account", user_path(@user), method: :delete, data: {confirm: "Are you sure you would like to delete your account?  All of your snippets and comments will also be removed from the site."}, class: "normalize-link") %>
+	</div>
+
+</div>
+
+<br>
 
 <h2 class="snippet-count">Your Snippets <span class="grey">( <%= @snippets.count %> )</span></h2>
 	<div id="snippet-blurb-all">
@@ -15,10 +24,5 @@
 	<div id="snippet-blurb-all">
 		<!-- render @commented -->
 	</div>
-
-	<%= button_to("remove account", user_snippet_path(@user), method: :delete) %>
-
-
-
 
 	<!-- when user updates, creates new account and doesnt delete old username -->
