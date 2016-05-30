@@ -117,6 +117,7 @@ header {
 
 footer {
 	text-align: center;
+	margin-top: 100px;
 }
 
 form.button_to {
@@ -134,3 +135,9 @@ form.button_to {
 .normalize-link:hover {
 	color: black;
 }
+
+label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}​

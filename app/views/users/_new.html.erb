@@ -1,7 +1,7 @@
 <%= render 'errors' %>
 
-<%= form_tag(users_path, method: 'post') do %>
-  <%= label_tag 'username' %>
+<%= form_tag(users_path, method: 'post', id: "user-form") do %>
+  <%= label_tag :username %>
   <%= text_field_tag "user[username]" %><br>
 
   <%= label_tag :email %>
@@ -10,5 +10,5 @@
   <%= label_tag :password %>
   <%= password_field_tag 'user[password]' %><br>
     
-<%= submit_tag('Register', :class => "create-button") %>
+<%= submit_tag('register', :class => "create-button") %>
 <% end %>

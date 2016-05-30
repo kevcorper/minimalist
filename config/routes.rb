@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index] do
   	resources :snippets, except: [:index, :show] do
       resources :comments, except: [:index, :show]
+      resources :favorites, only: [:create, :destroy]
     end
   end
 
@@ -13,11 +14,11 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:show]
 
-  resources :about, only: [:index]
-
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
+  get '/about' => 'welcome#about'
 end
