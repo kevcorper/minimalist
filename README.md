@@ -34,8 +34,8 @@ Lastly, a user is able to comment on all snippets.
 
 ##Coming Features
 
-*delete user/snippet/comment functionality coming soon
+-'favorites' functionality
 
 -live iframe for viewing result while typing HTML and CSS
--'favorites' functionality
--layout, font, and color pages with minimalist recommendations
+
+-layout, font, and color pages with minimalist recommendations and user post capabilities
