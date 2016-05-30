@@ -1,3 +1,20 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
 * {
 	font-family: Helvetica, sans-serif;
 	font-weight: lighter;
@@ -8,6 +25,7 @@ body {
 	min-width: 500px;
 	padding-left: 2px;
 	margin: auto;
+	margin-bottom: 25px;
 }
 
 a {
@@ -93,127 +111,6 @@ header {
   width: 100%;
 }
 
-#user-nav {
-	float: right;
-}
-
-#snippet-blurb-all {
-	margin: auto;
-	text-align: center;
-	padding: 0px;
-}
-
-.snippet-blurb {
-	border: 0.25px solid white;
-	border-radius: 3px;
-	display: inline-block;
-	padding: 10px;
-	width: 200px;
-	height: 200px;
-	text-align: justify;
-	margin: 30px 30px 0px 30px;
-	background-color: lightgray;
-}
-
-.snippet-blurb:hover {
-	border: 0.25px solid lightgray;
-	background-color: white;
-}
-
-.blurb-desc {
-	position: absolute;
-	width: 200px;
-	margin: 20px 0px;
-}
-
-.cat {
-	margin-bottom: 10px;
-	font-family: courier, monospace;
-	color:black;
-}
-
-.quote {
-	text-align: center;
-	color: lightgray;
-	margin-bottom: 50px;
-}
-
-#code-holder {
-	margin: 25px auto;
-	text-align: center;
-}
-
-#console {
-	margin: 25px auto;
-	width: 80%;
-	min-height: 100px;
-	padding: 25px;
-	border: 0.5px solid gray;
-	border-radius: 10px;
-}
-
-.code-box {
-	font-family: courier, monospace;
-	display: inline-block;
-	width: 80%;
-	height: 150px;
-	overflow: scroll;
-	padding: 20px;
-	background-color: gray;
-	color: white;
-	border-radius: 5px;
-	margin: 25px 15px;
-}
-
-#snippet-info {
-	margin: auto;
-	margin-bottom: 25px;
-	text-align: center;
-}
-
-#snippet-form {
-	width: 80%;
-	display: none;
-	margin: auto;
-	text-align: center;
-}
-
-#snippet-form.input {
-	display: block;
-	text-align: center;
-}
-
-#snippet-form.input[type="submit"] {
-	display: block;
-	text-align: center;
-}
-
-#about {
-	width: 75%;
-	text-align: center;
-	margin: auto;
-}
-
-.textarea {
-	display: block;
-	margin: 20px auto;
-	width: 80%;
-}
-
-.textarea textarea {
-	width: 40%;
-	height: 150px;
-	text-align: left;
-}
-
-.snippet-count {
-	text-align: center;
-}
-
-#user-greeting {
-	font-size: 50px;
-}
-
 .grey {
 	color: gray;
 }
@@ -222,22 +119,18 @@ footer {
 	text-align: center;
 }
 
-#comment-field {
-	width: 500px;
-	display: block;
-	margin: auto;
-	height: 100px;
+form.button_to {
+	display: inline-block;
 }
 
-.comment {
-	width: 75%;
-	border-top: 0.25px solid lightgray;
-	margin: auto;
-	padding: 30px 0px;
+.normalize-link {
+	border: none;
+	color: gray;
+	font-size: 16px;
+	background-color: white;
+	padding-left: 0px;
 }
 
-.comment div {
-	margin-bottom: 10px;
+.normalize-link:hover {
+	color: black;
 }
-
-

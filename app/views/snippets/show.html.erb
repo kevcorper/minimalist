@@ -6,8 +6,8 @@
 		"<%= @snippet.description %>"<br><br>
 
 		<% if current_user == @snippet.author %>
-			<%= link_to("edit", edit_user_snippet_path(current_user, @snippet)) %> |
-			<%= button_to("delete", user_snippet_path(current_user, @snippet), method: :delete) %>
+			<%= link_to("update", edit_user_snippet_path(current_user, @snippet), class: "normalize") %> |
+			<%= button_to("remove", user_snippet_path(current_user, @snippet), method: :delete, data: {confirm: "Are you sure you would like to delete this snippet?"}, class: "normalize-link") %>
 		<% end %>
 	</div>
 
