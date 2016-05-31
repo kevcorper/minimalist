@@ -22,17 +22,18 @@
 	</div>
 
 	<div id="favorite">
-	<% if logged_in? %>
-		<% if !current_user.has_favorite?(@snippet) %>
-			<%= button_to("favorite", user_snippet_favorites_path(current_user, @snippet), method: :post, class: "favorite-button") %>
-		<% else %>
-			<%= button_to("unfavorite", user_snippet_favorite_path(current_user, @snippet, @snippet), method: :delete, class: "favorite-button") %>
+		<% if logged_in? %>
+			<% if !current_user.has_favorite?(@snippet) %>
+				<%= button_to("favorite", user_snippet_favorites_path(current_user, @snippet), method: :post, class: "favorite-button") %>
+			<% else %>
+				<%= button_to("unfavorite", user_snippet_favorite_path(current_user, @snippet, @snippet), method: :delete, class: "favorite-button") %>
+			<% end %>
 		<% end %>
-	<% end %>
-</div>
+	</div>
 
 	<iframe src="../snippets/<%= @snippet.id %>/iframes" id="console">
 	</iframe>
+	
 </div>
 
 <div id="code-holder">

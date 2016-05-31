@@ -1,0 +1,9 @@
+<h3 style="text-align: center">insert a hex code here to add a color</h3>
+
+<%= render 'errors' %>
+
+<%= form_tag(user_colors_path(current_user), method: 'post', id: "color-form") do %>
+  <%= text_field_tag("color[code]", nil, placeholder: '#FF00FF') %><br>
+
+	<%= submit_tag('add') %>
+<% end %>

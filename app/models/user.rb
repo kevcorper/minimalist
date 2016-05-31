@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 	has_many :comments, dependent: :destroy, foreign_key: :author_id
 	has_many :user_snippets, dependent: :destroy
 	has_many :favorites, through: :user_snippets, source: :snippet
+	has_many :colors, dependent: :destroy, foreign_key: :author_id
 
 
 	def has_favorite?(snippet)

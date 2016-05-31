@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'snippets#index'
 
   resources :users, except: [:index] do
+    resources :colors, only: [:new, :create, :destroy]
   	resources :snippets, except: [:index, :show] do
       resources :comments, except: [:index, :show]
       resources :favorites, only: [:create, :destroy]
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  resources :colors, only: [:index]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

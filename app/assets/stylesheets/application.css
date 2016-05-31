@@ -341,7 +341,24 @@ label {
 }
 
 
+/*colors*/
 
+#colors-all {
+	margin: 25px;
+}
+
+.color {
+	display: inline-block;
+}
+
+.color-box {
+	width: 125px;
+	height: 125px;
+}
+
+#color-form {
+	text-align: center;
+}
 
 
 
