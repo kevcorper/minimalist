@@ -51,7 +51,7 @@ class CommentsController < ApplicationController
 		@user = User.find(params[:user_id])
 		if @user == @comment.author
 		  @comment.destroy
-		  redirect_to  snippet_path(@snippet)
+		  redirect_to snippet_path(@snippet)
 		else
 		  redirect_to snippet_path(@snippet)
 		end
