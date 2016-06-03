@@ -2,7 +2,7 @@
 
 <%= render 'errors' %>
 
-<%= form_tag(user_colors_path(current_user), method: 'post', id: "color-form") do %>
+<%= form_tag(user_colors_path(current_user), method: 'post', style: "text-align: center") do %>
   <%= text_field_tag("color[code]", nil, placeholder: '#FF00FF') %><br>
 
 	<%= submit_tag('add') %>
