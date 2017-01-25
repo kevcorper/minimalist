@@ -8,10 +8,6 @@ class CommentsController < ApplicationController
 			@comment = @snippet.comments.new(comment_params)
 			@comment.author = @user
 
-			# if @comment.save && request.xhr?
-			# 	render "comment", layout: false
-			# elsif @comment.save
-			#   redirect_to snippet_path(@snippet)
 			if @comment.save
 				redirect_to snippet_path(@snippet)
 			else

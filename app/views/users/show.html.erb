@@ -1,12 +1,9 @@
 <div id="user-title">
-
 	<h1 id="user-greeting">hey there, <span class="grey"><%= @user.username %></span>!</h1>
-
 	<div id="user-edit">
 		<%= link_to("edit account", edit_user_path(@user), :class => "normalize-link") %> |
 		<%= button_to("remove account", user_path(@user), method: :delete, data: {confirm: "Are you sure you would like to delete your account?  All of your snippets and comments will also be removed from the site."}, class: "normalize-link") %>
 	</div>
-
 </div>
 
 <br>

@@ -14,16 +14,4 @@ $(document).ready(function() {
 			$target.css('background-color', 'white')
 			$target.css('color', 'gray')}
 	});
-
-	// $('#comment-form').submit(function(event) {
-	// 	event.preventDefault();
-
-	// 	$target = $(event.target)
-
-	// 	$.ajax({url: $target.attr('action'), type: $target.attr('method'), data: $target.serialize()})
-	// 		.done(function(response) {
-	// 			$('#comments-all').prepend(response)
-	// 			$('#comment-form').find('textarea').val('')
-	// 	});
-	// });
 });
